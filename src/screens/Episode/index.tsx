@@ -1,8 +1,10 @@
 import {RouteProp, useRoute} from '@react-navigation/native';
 import React, {useMemo} from 'react';
+import {ScrollView, StyleSheet} from 'react-native';
 import Loading from '../../components/Loading';
 import ShowEvent from '../../components/ShowEvent';
 import {RootStackParamList, SCREENS} from '../../navigation';
+import {colors} from '../../styles';
 import {useEpisode} from './services/useEpisode';
 
 export interface EpisodeProps {}
@@ -24,14 +26,23 @@ const Episode: React.FC<EpisodeProps> = ({}) => {
   }
 
   return (
-    <ShowEvent
-      showName={episode?.name}
-      imageUri={episode?.image?.original ?? episode?.image?.medium}
-      premiered={episode?.airdate}
-      copyHelper={copyHelper}
-      summary={episode?.summary}
-    />
+    <ScrollView contentContainerStyle={styles.container}>
+      <ShowEvent
+        showName={episode?.name}
+        imageUri={episode?.image?.original ?? episode?.image?.medium}
+        premiered={episode?.airdate}
+        copyHelper={copyHelper}
+        summary={episode?.summary}
+      />
+    </ScrollView>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flexGrow: 1,
+    backgroundColor: colors.background,
+  },
+});
 
 export default Episode;

@@ -78,3 +78,7 @@ or
 ```bash
 yarn ios
 ```
+
+## How to test through APK
+
+- Go to the Distribution folder and download the APK into your Android phone
