@@ -2,6 +2,7 @@ import React, {PropsWithChildren} from 'react';
 import {Text as RNText, TextProps as RNTextProps} from 'react-native';
 import {
   ColorKeyType,
+  colors,
   FontVariantKeyType,
   text,
   TextSizeKeyType,
@@ -27,7 +28,7 @@ const Text: React.FC<TextProps> = ({
         {
           fontSize: size ? text[size] : text.xs,
           fontFamily: `FiraSans-${fontVariant || 'Regular'}`,
-          color: color ?? 'black',
+          color: colors[color ?? 'black'],
         },
       ]}>
       {children}

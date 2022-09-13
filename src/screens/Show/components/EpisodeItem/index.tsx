@@ -36,7 +36,7 @@ const EpisodeItem: React.FC<EpisodeItemProps> = ({episode, onEpisodePress}) => {
         ) : (
           <ImageFallback style={styles.image} />
         )}
-        <Text numberOfLines={2} color="white" size="lg">
+        <Text style={styles.title} numberOfLines={2} color="white" size="lg">
           {episode?.number ? `${episode.number}. ` : ''}
           {episode.name}
         </Text>
@@ -69,6 +69,9 @@ const styles = StyleSheet.create({
     fontFamily: 'FiraSans-Regular',
     fontSize: text.lg,
     color: colors.white,
+  },
+  title: {
+    flex: 1,
   },
 });
 

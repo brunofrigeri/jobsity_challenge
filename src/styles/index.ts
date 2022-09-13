@@ -8,6 +8,7 @@ export const colors = {
   gray: '#dcdcdc',
   dark_gray: '#808080',
   background: '#1d1b1c',
+  primary: '#5cb4de',
 };
 
 export const margins = {

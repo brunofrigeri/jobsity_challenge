@@ -27,7 +27,7 @@ const Tray = forwardRef<BottomSheetModal, TrayProps>(({children}, ref) => {
       <BottomSheetModal
         ref={ref}
         index={0}
-        snapPoints={['25%', '50%']}
+        snapPoints={['25%', '50%', '75%', '100%']}
         enablePanDownToClose
         backdropComponent={renderBackdrop}>
         {children}
